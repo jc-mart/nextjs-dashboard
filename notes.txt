@@ -1,0 +1,20 @@
+Using Node.js to learn React. Had to find the nodejs package using `pacman -Qs'.
+
+Components: Things to put stuff in
+Props: Things that you put data (read-only)
+State: Things that are interactive with the user
+
+Static components, things that aren't susceptible to change by user interaction should be rendered on the server; things that will be manipulated by user action should be rendered on the client. This is to aid in performance.
+
+Okay, learned the foundations of react. Using Next.js to practice making a detailed webpage so that I can have the confidence to start developing a church website.
+
+Okay so I can scroll in tmux by pressing `Ctrl+B` followed by `[`. This'll let me scroll up/down
+
+Some commands to test/run project:
+
+1. pnpm run dev / pnpm dev -- dev server
+2. pnpm run build -- builds app for production
+3. pnpm start -- runs the built app in production mode
+4. pnpm i -- install project's packages
+
+Next.js Links allow for prefetching of pages that are in Link tags. Also separates code so it's quicker loading smaller pieces and potentially dodging a page that could throw an error. If all code was downloaded with the error, site wouldn't load.
