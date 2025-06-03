@@ -18,3 +18,6 @@ Some commands to test/run project:
 4. pnpm i -- install project's packages
 
 Next.js Links allow for prefetching of pages that are in Link tags. Also separates code so it's quicker loading smaller pieces and potentially dodging a page that could throw an error. If all code was downloaded with the error, site wouldn't load.
+
+postgres.js package protects against SQL injection attacks.
+Querying the database directly can offload memory usage on client. e.g., when getting the latest invoices, sort them in the SQL request to avoid sorting on device, consuming memory and time.
