@@ -23,3 +23,45 @@ postgres.js package protects against SQL injection attacks.
 Querying the database directly can offload memory usage on client. e.g., when getting the latest invoices, sort them in the SQL request to avoid sorting on device, consuming memory and time.
 
 For data fetches, it's best to wrap them in Suspense components. Best to do it at the granular level, where it's needed. If multiple of the same thing need a data fetch, like multiple cards, you can do a wrapper so that it doesn't create a pop effect but a staggered effect. Prevents UI blocking.
+
+---- Added color column so things will be formatted from here on down. ---------
+
+OBS: Confused
+Just an (OBS)ervation as I'm working through chapter 10 of the dashboard
+tutorial. When visually showing what parts of the dashboard are static and
+dynamic, the sign out button is shown to be a dynamically rendered component.
+Maybe a tiny oversight, but confused me to look across the different functions.
+Eventually found that it was in `@/app/ui/dashboard/sidebar.tsx`, not programmed
+to do anything.
+
+NOTES: PPR [Experimental]
+Partial Prerendering (PPR) sounds pretty cool. So the way that I understand it
+is that any static routes within the page will prerender the static components,
+leaving only to request the dynamic components data when the user goes into that
+route. There won't be any visually jarring effects while the page is loading if
+you create boxes that represent the components that are being generated.
+Currently experimental, but may soon be a rolled out feature once it's stable.
+Killer thing is that code won't need to be changed as long as your dynamic parts
+are wrapped in Suspense components.
+
+NOTES: Data fetching summary
+A few things were done to optimize data fetching for this application:
+
+1. Database in the same region was created to reduce latency between server
+and database.
+
+2. Fetched data that's on the server using React Server Components. Expensive
+data fetches and logic are kept on the server, reducing client's JS bundle,
+and prevents database secrets from being exposed in the  client.
+
+3. Used SQL to only fetch the data that was needed. So you wouldn't have to get
+a large list of results when you can filter the results on the server to reduce
+the amount of memory and wait time.
+
+4. Parallelized fetching using JS's Promises
+
+5. Implemented streaming, so that static page elements are rendered quickly for
+user to interact with the page, and dynamic elements will load as they come.
+
+6. Move data fetching down to where the components need it, isolating which part
+of the projects routes are dynamic. (Beneficial for PPR)

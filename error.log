@@ -1,0 +1,16 @@
+I think this was caused by the sign out button not yet having any functionality.
+Happened during Chapter 10 of Next.js tutorial dashboard app. Sign out button
+was found in @/app/ui/dashboard/sidenav.tsx
+
+---------------------------
+Next.js package not found
+
+Debug info:
+- Execution of get_entrypoints_with_issues_operation failed
+- Execution of EntrypointsOperation::new failed
+- Execution of Project::entrypoints failed
+- Execution of AppProject::routes failed
+- Execution of directory_tree_to_entrypoints_internal failed
+- Execution of directory_tree_to_loader_tree failed
+- Execution of get_next_package failed
+- Next.js package not found
