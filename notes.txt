@@ -21,3 +21,5 @@ Next.js Links allow for prefetching of pages that are in Link tags. Also separat
 
 postgres.js package protects against SQL injection attacks.
 Querying the database directly can offload memory usage on client. e.g., when getting the latest invoices, sort them in the SQL request to avoid sorting on device, consuming memory and time.
+
+For data fetches, it's best to wrap them in Suspense components. Best to do it at the granular level, where it's needed. If multiple of the same thing need a data fetch, like multiple cards, you can do a wrapper so that it doesn't create a pop effect but a staggered effect. Prevents UI blocking.
