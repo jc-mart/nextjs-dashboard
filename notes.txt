@@ -65,3 +65,4 @@ user to interact with the page, and dynamic elements will load as they come.
 
 6. Move data fetching down to where the components need it, isolating which part
 of the projects routes are dynamic. (Beneficial for PPR)
+
