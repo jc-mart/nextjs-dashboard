@@ -69,3 +69,8 @@ of the projects routes are dynamic. (Beneficial for PPR)
 NOTES: Server actions
 React's server actions allow for forms to work even if the associated JS isn't
 yet loaded on the client. This is called progressive enhancement.
+
+NOTES: Zod
+Zod is a TypeScript-first validation library. Don't need to validate manually,
+saving time and effort. Zod has this cool `coerce` feature that will change
+data types as it's being validated.
