@@ -66,3 +66,6 @@ user to interact with the page, and dynamic elements will load as they come.
 6. Move data fetching down to where the components need it, isolating which part
 of the projects routes are dynamic. (Beneficial for PPR)
 
+NOTES: Server actions
+React's server actions allow for forms to work even if the associated JS isn't
+yet loaded on the client. This is called progressive enhancement.
