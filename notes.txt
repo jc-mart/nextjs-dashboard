@@ -74,3 +74,11 @@ NOTES: Zod
 Zod is a TypeScript-first validation library. Don't need to validate manually,
 saving time and effort. Zod has this cool `coerce` feature that will change
 data types as it's being validated.
+
+NOTES: Tmux
+So if logged into a remote session is running tmux and you're running tmux
+locally, you need to hit `CTRL+B` twice so that it gets received remotely.
+
+NOTES: Redirect
+Apparently Next.js's redirect function works by throwing an error. If this was
+put in a try/catch block, the redirect wouldn't work.
