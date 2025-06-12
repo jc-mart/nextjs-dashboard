@@ -82,3 +82,7 @@ locally, you need to hit `CTRL+B` twice so that it gets received remotely.
 NOTES: Redirect
 Apparently Next.js's redirect function works by throwing an error. If this was
 put in a try/catch block, the redirect wouldn't work.
+
+NOTES: Metadata
+Any layout.js or page.js file can hold metadata that will be reflected on the
+browsers tab name, or even the favicon.
